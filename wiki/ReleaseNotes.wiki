@@ -1,0 +1,7 @@
+#summary Release Notes for each release
+
+= v0.1 =
+
+  * First release
+  * Tags supported: TMPL_VAR, TMPL_LOOP
+  * Parameters supported: filename
