@@ -1,0 +1,12 @@
+#summary How to install html-template-ps
+= Introduction =
+
+Downloads are a zip file containing PowerShell modules, inside a single folder named after the module name, _HTMLTemplate_. To install the module, just put this folder containing all the files into a location that PowerShell searches for folders. Some suggestions are below. No further steps are necessary.
+
+== System wide ==
+
+To install for all users, place in _C:\WINDOWS\system32\Windows Powershell\v1.0\modules_
+
+== Single User ==
+
+To install for you, place in _C:\Users\<username>\Windows Powershell\modules\_, creating folders as necessary.
