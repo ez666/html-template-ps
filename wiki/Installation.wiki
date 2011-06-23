@@ -9,4 +9,4 @@ To install for all users, place in _C:\WINDOWS\system32\Windows Powershell\v1.0\
 
 == Single User ==
 
-To install for you, place in _C:\Users\<username>\Windows Powershell\modules\_, creating folders as necessary.
+To install for you, place in _C:\Users\`<username`>\Windows Powershell\modules\_, creating folders as necessary.
