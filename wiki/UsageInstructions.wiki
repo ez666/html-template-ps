@@ -79,20 +79,61 @@ Write-Output $template.output()
 
 = Examples =
 
-First you make a template - this is just a normal HTML file with a few extra tags, the simplest being <TMPL_VAR>
+First you make a template - this is just a normal HTML file with a few extra tags, the simplest being `<TMPL_VAR>`
 
-For example, C:\test.tmpl:
+For example, C:\test.tmpl: [http://code.google.com/p/html-template-ps/downloads/detail?name=test.tmpl&can=2&q= download]
 {{{
 <html>
   <head><title>List of Fruit</title>
   <body>
-    My favourite fruit is <TMPL_VAR NAME="FAVOURITE">
+    My favourite fruit is <TMPL_VAR NAME="FAVOURITE"><br/>
+    <br/>
     <table border="1">
-      <tr><th>Name</th><th>Colour>/th></tr>
+      <tr><th>Name</th><th>Colour</th></tr>
 <TMPL_LOOP NAME="FRUIT">      <tr><td><TMPL_VAR NAME="NAME"></td><td><TMPL_VAR NAME="COLOUR"></td></tr>
 </TMPL_LOOP>    </table>
   </body>
 </html>
 }}}
+The spacings may look a bit funny, but everything (including tabs, spaces and new lines) between the `<TMPL_LOOP>` and `</TMPL_LOOP>` gets replicated for each row of data (each element in the array that makes up the loop). So you can either have a pretty template, or pretty output. In this case, I went for pretty output.
 
-Then a short PowerShell script:
+Then a short PowerShell script: [http://code.google.com/p/html-template-ps/downloads/detail?name=test.ps1&can=2&q= download]
+{{{
+Import-Module HTMLTemplate
+
+$template = New-HTMLTemplate(@{ filename = 'C:\test.tmpl'})
+$template.param('FAVOURITE', 'apple')
+$template.param('FRUIT', @( @{ NAME = 'Apple'; COLOUR = 'Green' }, @{ NAME = 'Orange'; COLOUR = 'Orange' } ))
+
+Write-Output $template.output()
+}}}
+This assumes you have followed the InstallationInstructions. If not, you can change the first line to
+{{{
+Import-Module "c:\path\to\HTMLTemplate"
+}}}
+
+You can now run the script:
+{{{
+PS C:\Users\user> C:\test.ps1
+<html>
+  <head><title>List of Fruit</title>
+  <body>
+    My favourite fruit is apple
+    <table border="1">
+      <tr><th>Name</th><th>Colour>/th></tr>
+      <tr><td>Apple</td><td>Green</td></tr>
+      <tr><td>Orange</td><td>Orange</td></tr>
+    </table>
+  </body>
+</html>
+}}}
+
+Which gives this output:
+
+http://html-template-ps.googlecode.com/files/exmaple1-output.png
+
+Note that if you want to redirect the output into a file, you can:
+{{{
+PS C:\Users\user> C:\test.ps1 >c:\Users\user\Documents\test.html
+}}}
+But this will only work if you use Write-Output in your script. If you use Write-Host, the output is written to the console, and the redirection is ignored.
