@@ -1,0 +1,34 @@
+#summary Which versions of PowerShell is html-template-ps compatible with?
+
+= Compatiblity = 
+
+|| * Version * || * Compatibility * ||
+|| 1.0 || Unknown, please send reports ||
+|| 2.0 || Working ||
+
+= How to find your installed version = 
+
+  # Open PowerShell
+  # Type {{{$Host.Version}}}
+
+For example:
+
+== PowerShell 1.0 ==
+
+{{{
+PS H:\> $Host.Version
+
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+1      0      0      0
+}}}
+
+== PowerShell 2.0 ==
+
+{{{
+PS H:\> $Host.Version
+
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+2      0      -1      -1
+}}}
