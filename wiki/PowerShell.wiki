@@ -1,0 +1,3 @@
+#summary What is PowerShell?
+
+See [http://en.wikipedia.org/wiki/Windows_PowerShell Wikipedia]
