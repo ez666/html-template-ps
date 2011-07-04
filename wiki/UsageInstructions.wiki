@@ -109,7 +109,7 @@ Write-Output $template.output()
 }}}
 This assumes you have followed the InstallationInstructions. If not, you can change the first line to
 {{{
-Import-Module "c:\path\to\HTMLTemplate"
+Import-Module "c:\path\to\HTMLTemplate\HTMLTemplate.psm1"
 }}}
 
 You can now run the script:
