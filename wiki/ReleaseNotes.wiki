@@ -5,7 +5,7 @@
   * Fixed Issue 1: spelling mistake
   * Fixed Issue 2: crash when System.DBNull provided as a value
 
-= v0.1 2011-06-xx =
+= v0.1 2011-06-22 =
 
   * First release
   * Tags supported: TMPL_VAR, TMPL_LOOP
