@@ -1,9 +1,10 @@
 #summary Release Notes for each release
-= v0.1.2 (not released)
+= v0.2 2011-07-06 = 
   
   * Support for tags that have attributes without quotes around the values
   * Corrected behaviour when tags have no corresponding param set
   * Preliminary support for confirming params are in template when set
+  * Support for TMPL_IF, TMPL_ELSE, TMPL_UNLESS
 
 = v0.1.1 2011-07-04 =
 
@@ -12,6 +13,6 @@
 
 = v0.1 2011-06-22 =
 
-  * First release
+  * First release of code on google.com; code distributed from 2010 onwards by hand
   * Tags supported: TMPL_VAR, TMPL_LOOP
   * Parameters supported: filename
