@@ -17,10 +17,13 @@ To see the full range of functionality available in HTML::Template, go [http://s
 
 = Current limitations =
 
-As of v0.1, the following tags are supported:
+As of v0.2, the following tags are supported:
 
   * TMPL_VAR
   * TMPL_LOOP
+  * TMPL_IF
+  * TMPL_ELSE
+  * TMPL_UNLESS
 
 The following methods are supported:
 
