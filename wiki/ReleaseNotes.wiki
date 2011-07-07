@@ -1,4 +1,8 @@
 #summary Release Notes for each release
+= v0.2.1 2011-07-07 =
+
+  * Commented out left-behind debug code causing extra output
+
 = v0.2 2011-07-06 = 
   
   * Support for tags that have attributes without quotes around the values
